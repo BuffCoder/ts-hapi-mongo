@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/BrandonCKrueger/ts-hapi-mongo#readme",
   "dependencies": {
+    "bluebird": "^2.9.34",
     "hapi": "^8.8.0",
     "joi": "^6.6.1",
     "mongodb": "^2.0.39"

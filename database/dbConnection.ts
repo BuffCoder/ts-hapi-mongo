@@ -1,25 +1,29 @@
 /// <reference path="../typings/mongodb/mongodb.d.ts" />
+/// <reference path="../typings/bluebird/bluebird.d.ts" />
 import mongodb = require('mongodb');
-let mongoUrl = 'mongodb://localhost:27017/HapiTest';
-let hapiTestDb = null;
+import Promise = require('bluebird');
 
-export function getConnection(next){
-	if(!hapiTestDb) {
-		mongodb.MongoClient.connect(mongoUrl, function(err, db){
-            if(err){
-				console.log('Error connecting to: ' + mongoUrl);
-                next(err,null);
-            }
-            else{
-                hapiTestDb = {
-                    db: db,
-                    users: db.collection('Users')
-                };
-                next(null,hapiTestDb);
-            }
-        })
-	}
-    else {
-        next(null,hapiTestDb);
-    }
+let mongoUrl = 'mongodb://localhost:27017/HapiTest';
+let myDb = null;
+
+export function getConnection(){
+    return new Promise(function(resolve, reject) {
+        if(!myDb) {
+    		mongodb.MongoClient.connect(mongoUrl, function(error, db){
+                if(error){
+    				reject(error);
+                }
+                else{
+                    myDb = {
+                        db: db,
+                        users: db.collection('Users')
+                    };
+                    resolve(myDb)
+                }
+            })
+    	}
+        else {
+            resolve(myDb);
+        }
+    });
 }

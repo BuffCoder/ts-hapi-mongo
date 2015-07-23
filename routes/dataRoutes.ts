@@ -1,6 +1,9 @@
+/// <reference path="../typings/bluebird/bluebird.d.ts" />
 import hapi = require('hapi');
 import joi = require('joi');
+import Promise = require('bluebird');
 import database = require('../database/index');
+
 let db
 
 export function getRoutes() {
@@ -18,8 +21,8 @@ export function getRoutes() {
                 config: {
                     validate: {
                         payload: {
-                            name: joi.string(),
-                            quantity: joi.number().integer()
+                            username: joi.string(),
+                            age: joi.number().integer()
                         }
                     }
                 }
@@ -30,17 +33,23 @@ export function getRoutes() {
 
 // Private functions
 function get(request: hapi.Request, reply: hapi.IReply) {
-    db.getUsers(function(err, results){
-        if(err){
-            reply(err);
-        }
-        else {
-            reply(results);
-        }
-    });
-    //reply("You've reached /data as GET");
+    db.getUsers().then(function(users : any) {
+        reply(users);
+    })
+    .catch(function(error) {
+		reply(error);
+	});
 }
 
 function post(request: hapi.Request, reply: hapi.IReply) {
-    reply("You've reached /data as POST");
+    let user = {
+        username: request.payload.username,
+        age: request.payload.age
+    };
+    db.addUser(user).then(function(user : any) {
+        reply("User added");
+    })
+    .catch(function(error) {
+		reply(error);
+	});
 }
