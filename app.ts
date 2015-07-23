@@ -12,7 +12,7 @@ server.connection({
 });
  
 // defining our routes
-new serverRoutes.ServerRoutes(server);
+serverRoutes.RegisterRoutes(server);
  
 // starting the server
 server.start(function (err) {
