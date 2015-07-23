@@ -12,8 +12,7 @@ server.connection({
 });
  
 // defining our routes
-let routes = new serverRoutes.ServerRoutes();
-routes.registerRoutes(server);
+new serverRoutes.ServerRoutes(server);
  
 // starting the server
 server.start(function (err) {

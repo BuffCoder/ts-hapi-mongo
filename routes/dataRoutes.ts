@@ -33,7 +33,7 @@ export function getRoutes() {
 
 // Private functions
 function get(request: hapi.Request, reply: hapi.IReply) {
-    db.getUsers().then(function(users : any) {
+    db.users.get().then(function(users : any) {
         reply(users);
     })
     .catch(function(error) {
@@ -46,7 +46,7 @@ function post(request: hapi.Request, reply: hapi.IReply) {
         username: request.payload.username,
         age: request.payload.age
     };
-    db.addUser(user).then(function(user : any) {
+    db.users.insert(user).then(function(user : any) {
         reply("User added");
     })
     .catch(function(error) {

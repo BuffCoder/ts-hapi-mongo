@@ -4,16 +4,11 @@ import baseRoutes = require('./baseRoutes');
 import dataRoutes = require('./dataRoutes');
 
 export class ServerRoutes {
-	private routes: Array<any>
-	
-	constructor(){
-		this.routes = [].concat(
+	constructor(server: hapi.Server){
+		let routes = [].concat(
 			baseRoutes.getRoutes(),
 			dataRoutes.getRoutes()
 		);
+		server.route(routes);
     }
-	
-	registerRoutes(server: hapi.Server) {
-		server.route(this.routes);
-	}
 }
