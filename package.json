@@ -1,0 +1,24 @@
+{
+  "name": "hapi_mongo_sample",
+  "version": "1.0.0",
+  "description": "Sample node application using hapi, mongodb, and typescript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonCKrueger/ts-hapi-mongo.git"
+  },
+  "author": "Brandon Krueger <Brandon.C,Krueger@gmail,com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonCKrueger/ts-hapi-mongo/issues"
+  },
+  "homepage": "https://github.com/BrandonCKrueger/ts-hapi-mongo#readme",
+  "dependencies": {
+    "hapi": "^8.8.0",
+    "joi": "^6.6.1",
+    "mongodb": "^2.0.39"
+  }
+}

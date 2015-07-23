@@ -1,0 +1,24 @@
+{
+  "version": "v4",
+  "repo": "chbrown/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "bluebird/bluebird.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "node/node.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "hapi/hapi.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "joi/joi.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "mongodb/mongodb.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    }
+  }
+}
