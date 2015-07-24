@@ -2,7 +2,7 @@ import hapi = require('hapi');
 import serverRoutes = require('./routes/ServerRoutes');
 
 // creating the hapi server instance
-let server = new hapi.Server();
+let server: hapi.Server = new hapi.Server();
 
 // adding a new connection that can be listened on
 server.connection({
@@ -10,15 +10,14 @@ server.connection({
   host: 'localhost',
   labels: ['web']
 });
- 
+
 // defining our routes
 serverRoutes.RegisterRoutes(server);
- 
+
 // starting the server
-server.start(function (err) {
+server.start(function (err: any): void {
   if (err) {
     throw err;
   }
-  
   console.log('hapi server started');
 });
