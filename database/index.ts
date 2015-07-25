@@ -1,11 +1,9 @@
 /// <reference path="../typings/bluebird/bluebird.d.ts" />
-import dbConnection = require('./dbConnection');
-import Promise = require('bluebird');
 import userCollection = require('../database/collections/users');
 
 export class Database {
-	public users
-	
+	public users: Object;
+
 	constructor() {
 		this.users = userCollection.getMethods();
 	}

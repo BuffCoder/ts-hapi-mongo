@@ -1,51 +1,49 @@
 /// <reference path="../../typings/bluebird/bluebird.d.ts" />
-import dbConnection = require('../dbConnection');
 import Promise = require('bluebird');
+import dbConnection = require('../dbConnection');
 
-export interface User {
-	username: string,
-	age: number
+
+export class User {
+	username: string;
+	age: number;
 }
 
-export function getMethods(){
-	let collectionMethods = {
+export function getMethods(): Object {
+	let collectionMethods: Object = {
 		get: get,
 		insert: insert
-	}
+	};
 	return collectionMethods;
 }
-	
-function get() {
-	return new Promise(function(resolve, reject) {
-        dbConnection.getConnection().then(function(db : any) {
-			db.users.find().toArray(function(error, results) {
-				if(error) {
+
+function get(): any {
+	return new Promise(function(resolve: any, reject: any): any {
+        dbConnection.getConnection().then(function(db: any): void {
+			db.users.find().toArray(function(error: any, results: User): void {
+				if (error) {
 					reject(error);
 				} else {
 					resolve(results);
 				}
 			});
-		})
-		.catch(function(error) {
+		}).catch(function(error: any): void {
 			reject(error);
 		});
     });
 }
 
-function insert(user : User) {
-	return new Promise(function(resolve, reject) {
-		dbConnection.getConnection().then(function(db : any) {
-			db.users.insert(user, function(error, record) {
-				if(error) {
+function insert(user: User): any {
+	return new Promise(function(resolve: any, reject: any): any {
+		dbConnection.getConnection().then(function(db: any): void {
+			db.users.insert(user, function(error: any, record: User): void {
+				if (error) {
 					reject(error);
-				}
-				else {
+				} else {
 					resolve(record);
 				}
-			})
-		})
-		.catch(function(error) {
+			});
+		}).catch(function(error: any): void {
 			reject(error);
 		});
-	})
+	});
 }

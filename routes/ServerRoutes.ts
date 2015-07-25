@@ -1,12 +1,17 @@
 import hapi = require('hapi');
-import joi = require('joi');
 import baseRoutes = require('./baseRoutes');
 import dataRoutes = require('./dataRoutes');
 
-export function RegisterRoutes(server : hapi.Server) {
-	let routes = [].concat(
+export function RegisterRoutes(server: hapi.Server): void {
+	let routes: Array<Route> = [].concat(
 		baseRoutes.getRoutes(),
 		dataRoutes.getRoutes()
 	);
 	server.route(routes);
+}
+
+export class Route implements hapi.IRouteConfiguration{
+    method: string;
+	path: string;
+	handler: hapi.IRouteHandlerConfig;
 }

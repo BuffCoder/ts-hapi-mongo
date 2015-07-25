@@ -1,7 +1,8 @@
 import hapi = require('hapi');
+import ServerRoutes = require('./ServerRoutes');
 
-export function getRoutes() {
-    let routes : Array<any> = [
+export function getRoutes(): Array<ServerRoutes.Route> {
+    let routes: Array<ServerRoutes.Route> = [
         {
             method: 'GET',
             path: '/',
@@ -11,7 +12,7 @@ export function getRoutes() {
     return routes;
 }
 
-// Private functions
-function get(request: hapi.Request, reply: hapi.IReply) {
-    reply("You've reached / as GET");
+// private functions
+function get(request: hapi.Request, reply: hapi.IReply): void {
+    reply('You\'ve reached / as GET');
 }

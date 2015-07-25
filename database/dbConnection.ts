@@ -3,26 +3,24 @@
 import mongodb = require('mongodb');
 import Promise = require('bluebird');
 
-let mongoUrl = 'mongodb://localhost:27017/HapiTest';
-let myDb = null;
+let mongoUrl: string = 'mongodb://localhost:27017/HapiTest';
+let myDb: any = null;
 
-export function getConnection(){
-    return new Promise(function(resolve, reject) {
-        if(!myDb) {
-    		mongodb.MongoClient.connect(mongoUrl, function(error, db){
-                if(error){
+export function getConnection(): any {
+    return new Promise(function(resolve: any, reject: any): any {
+        if (!myDb) {
+    		mongodb.MongoClient.connect(mongoUrl, function(error: any, db: mongodb.Db): void{
+                if (error) {
     				reject(error);
-                }
-                else{
+                } else {
                     myDb = {
                         db: db,
                         users: db.collection('Users')
                     };
-                    resolve(myDb)
+                    resolve(myDb);
                 }
-            })
-    	}
-        else {
+            });
+    	} else {
             resolve(myDb);
         }
     });
