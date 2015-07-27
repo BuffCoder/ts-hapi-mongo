@@ -1,3 +1,4 @@
+/// <reference path="../typings/tsd.d.ts" />
 import hapi = require('hapi');
 import serverRoutes = require('./routes/ServerRoutes');
 

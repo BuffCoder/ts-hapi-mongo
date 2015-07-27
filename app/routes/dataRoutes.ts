@@ -1,4 +1,4 @@
-/// <reference path="../typings/bluebird/bluebird.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 import hapi = require('hapi');
 import joi = require('joi');
 import ServerRoutes = require('./ServerRoutes');

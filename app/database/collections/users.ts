@@ -1,4 +1,4 @@
-/// <reference path="../../typings/bluebird/bluebird.d.ts" />
+/// <reference path="../../../typings/tsd.d.ts" />
 import Promise = require('bluebird');
 import dbConnection = require('../dbConnection');
 

@@ -1,5 +1,4 @@
-/// <reference path="../typings/mongodb/mongodb.d.ts" />
-/// <reference path="../typings/bluebird/bluebird.d.ts" />
+/// <reference path="../../typings/tsd.d.ts" />
 import mongodb = require('mongodb');
 import Promise = require('bluebird');
 

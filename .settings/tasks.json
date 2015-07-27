@@ -21,7 +21,7 @@
 	"showOutput": "silent",
 	
 	// args is the HelloWorld program to compile.
-	"args": ["${file}", "--module", "amd", "--target", "ES5"],
+	"args": ["${file}", "--module", "commonjs", "--target", "ES5"],
 	
 	// use the standard tsc problem matcher to find compile problems
 	// in the output.
