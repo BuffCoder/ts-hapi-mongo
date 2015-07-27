@@ -2,14 +2,21 @@
 
 This is an example node application built using TypeScript 1.5.0-beta and Hapi 8.8.0.
 
+### Requirements
+---
+* Have Node v0.10.36 or higher installed
+* Have [MongoDB](https://www.mongodb.org/) installed and a local server running
+* Have TypeScript 1.5.0-beta or higher installed globally (`npm i -g tsd typescript@^1.5.0-beta`)
+
 ### Setup
 ---
 * Run `git clone https://github.com/BrandonCKrueger/ts-hapi-mongo.git` to clone the repository
-* Run `npm install` to install dependencies (hapi, joi, mongodb)
+* Run `npm install` to install dependencies
 * Run `tsd install` to install TypeScript typings dependencies (node, hapi, joi, bluebird, mongodb)
-  * <strong>Note:</strong> If you do not have TypeScript installed run `npm i -g tsd typescript@^1.5.0-beta`
-* Run `tsc` to compile all TypeScript files
-* Run `node server` to start the server on port 3000
+* Compile the TypeScript
+  * From Terminal: `gulp'
+  * From VSCode: `CMD + SHIFT + B` for Mac | `CTRL + SHIFT + B` for Windows
+* Run `gulp develop` from the terminal, or debug from VSCode to start the server on port 3000
 
 ### Available Routes
 ---
