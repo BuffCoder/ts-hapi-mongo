@@ -1,13 +1,14 @@
 {
 	"version": "1.5.0",
 	"compilerOptions": {
-	"declaration": false,
-	"listFiles": false,
-	"module": "commonjs",
-	"noImplicitAny": false,
-	"noLib": false,
-	"removeComments": true,
-	"sourceMap": false,
-	"target": "ES5"
+		"declaration": false,
+		"listFiles": false,
+		"module": "commonjs",
+		"noImplicitAny": false,
+		"noLib": false,
+		"removeComments": true,
+		"sourceMap": true,
+		"target": "ES5",
+		"outDir": "dest"
 	}
 }
