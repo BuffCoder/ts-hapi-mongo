@@ -2,7 +2,7 @@
 import userCollection = require('../database/collections/users');
 
 export class Database {
-	public users: Object;
+	public users: any;
 
 	constructor() {
 		this.users = userCollection.getMethods();

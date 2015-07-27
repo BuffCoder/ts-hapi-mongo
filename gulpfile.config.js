@@ -1,7 +1,7 @@
 'use strict';
 var GulpConfig = (function () {
     function GulpConfig() {
-        this.source = './app/';
+        this.source = './src/';
         this.output = './dest/';
         
         this.allJavaScript = [this.output + '**/*.js'];
