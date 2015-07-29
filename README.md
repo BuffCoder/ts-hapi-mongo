@@ -6,7 +6,7 @@ This is an example node application built using TypeScript 1.5.0-beta and Hapi 8
 ---
 * Have Node v0.10.36 or higher installed
 * Have [MongoDB](https://www.mongodb.org/) installed and a local server running
-* Have TypeScript 1.5.0-beta or higher installed globally (`npm i -g tsd typescript@^1.5.0-beta`)
+* Have TypeScript 1.5.0-beta or higher installed globally (`npm i -g tsd typescript@^1.5.3-beta`)
 * Code quality is maintained with the help of [TSLint](https://www.npmjs.com/package/tslint)
 
 ### Setup
