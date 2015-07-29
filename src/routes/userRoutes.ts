@@ -12,12 +12,12 @@ export function getRoutes(): Array<ServerRoutes.Route> {
     let routes: Array<ServerRoutes.Route> = [
             {
                 method: 'GET',
-                path: '/data',
+                path: '/users',
                 handler: get
             },
             {
                 method: 'POST',
-                path: '/data',
+                path: '/user',
                 handler: post,
                 config: {
                     validate: {

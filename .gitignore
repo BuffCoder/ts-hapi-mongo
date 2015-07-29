@@ -3,5 +3,8 @@ typings/
 node_modules/
 **/*.map
 /**/*.js
+
+# exceptions
 !gulpfile.js
 !gulpfile.config.js
+!tests/**/*

@@ -1,0 +1,35 @@
+{
+    "globals": {
+        "require": true,
+        "Promise": true,
+        "describe": true,
+        "beforeEach": true,
+        "afterEach": true,
+        "it": true
+    },
+    "rules": {
+        "indent": [
+            2,
+            "tab"
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-unused-vars": [
+            2,
+            {
+                "vars": "local",
+                "args": "after-used"
+            }
+        ]
+    },
+    "env": {
+        "browser": true
+    },
+    "extends": "eslint:recommended"
+}

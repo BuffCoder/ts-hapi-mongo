@@ -19,6 +19,12 @@
     },
     "mongodb/mongodb.d.ts": {
       "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
+    },
+    "chai/chai.d.ts": {
+      "commit": "9aee49a92b05f8690e8a616ad1c6cbc5a60b20ca"
     }
   }
 }
