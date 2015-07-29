@@ -7,6 +7,7 @@ This is an example node application built using TypeScript 1.5.0-beta and Hapi 8
 * Have Node v0.10.36 or higher installed
 * Have [MongoDB](https://www.mongodb.org/) installed and a local server running
 * Have TypeScript 1.5.0-beta or higher installed globally (`npm i -g tsd typescript@^1.5.0-beta`)
+* Code quality is maintained with the help of [TSLint](https://www.npmjs.com/package/tslint)
 
 ### Setup
 ---
@@ -25,5 +26,11 @@ This is an example node application built using TypeScript 1.5.0-beta and Hapi 8
 * `POST /`: Returns simple text that you've reached the base route using a `POST`
 
 **Data Routes**
-* `Get /data`: Returns a list of `Users(username: string, age: number)` from the database
-* `Post /data`: Accepts a JSON object with a `username: string` parameter and `age: number.integer`, adds that object to the `Users` list and returns the new list
+* `Get /users`: Returns a list of `Users(username: string, age: number)` from the database
+* `Post /user`: Accepts a JSON object with a `username: string` parameter and `age: number.integer`, adds that object to the `Users` list and returns the new list
+
+### Unit Tests
+---
+* Unit tests are done using [Mocha](http://mochajs.org/) and [Chai](http://chaijs.com/)
+* Unit tests code quality is maintained with the help of [ESLint](http://eslint.org/)
+* To run unit tests: `mocha "tests/**/*.spec.js"`
