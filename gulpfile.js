@@ -77,7 +77,7 @@ gulp.task('clean', function (cb) {
  * Start our node server
  */
 gulp.task('develop', ['ts-lint', 'compile-ts', 'generate-ts-refs', 'watch'], function () {
-    nodemon({ script: 'dest/app/server.js'
+    nodemon({ script: 'dest/server.js'
             , ext: 'js'
             , env: { 'NODE_ENV': 'development' }
            })
